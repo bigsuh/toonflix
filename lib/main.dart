@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/Button.dart';
 
 class Player {
   String name = 'nico';
@@ -69,44 +70,40 @@ class App extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          'Transfer',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
+                    Button(
+                      text: 'Transfer',
+                      bgColor: Colors.amber,
+                      textColor: Colors.black,
+                    ),
+                    Button(
+                        text: 'Request',
+                        bgColor: Color(0xFF1F2123),
+                        textColor: Colors.white)
+                  ],
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                const Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Wallets',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF1F2123),
-                        borderRadius: BorderRadius.circular(45),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          'Request',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                          ),
-                        ),
+                    Text(
+                      'View All',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
                       ),
                     )
                   ],
